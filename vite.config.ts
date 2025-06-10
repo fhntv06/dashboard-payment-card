@@ -19,5 +19,5 @@ export default defineConfig({
   build: {
     outDir: './build'
   },
-  base: '/' // for deploy github pages
+  base: '/dashboard-payment-card' // for deploy github pages
 })
