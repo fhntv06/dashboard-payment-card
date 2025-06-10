@@ -1,0 +1,1 @@
+export { exampleRequest } from './example'

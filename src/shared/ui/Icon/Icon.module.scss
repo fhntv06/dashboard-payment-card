@@ -1,0 +1,35 @@
+@use 'sass:math';
+@import '../../assets/styles/basics';
+
+$sizeIcon: 24px;
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	use {
+		height: 100%;
+		width: 100%;
+	}
+	.small {
+		height: 12px;
+		width: 12px;
+	}
+	.medium {
+		height: 16px;
+		width: 16px;
+	}
+	.big {
+		height: 24px;
+		width: 24px;
+	}
+	.large {
+		height: 32px;
+		width: 32px;
+	}
+	.logo {
+		width: 240px;
+		height: 94px;
+	}
+}

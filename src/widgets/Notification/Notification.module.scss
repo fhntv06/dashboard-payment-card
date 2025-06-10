@@ -1,0 +1,20 @@
+@import '../../shared/assets/styles/basics';
+
+.wrapper {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: flex;
+  align-items: start;
+  column-gap: $offset16;
+  width: 100%;
+  padding: $offset12 $offset16;
+  background-color: $light-black;
+  @include border('large');
+  transform: translateX(-50%);
+
+  p {
+    font-weight: $font-w-regular;
+  }
+}
