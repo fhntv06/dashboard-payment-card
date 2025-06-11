@@ -1,0 +1,31 @@
+@import '/src/shared/assets/styles/basics.scss';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 268px;
+  padding: $offset20;
+  background-color: $black;
+}
+.sidebar__title {
+  margin-left: $offset18;
+  margin-bottom: calc($offset18 * 3);
+  text-transform: uppercase;
+}
+.sidebar__list {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar__list__item {
+  display: flex;
+  align-items: center;
+  column-gap: $offset16;
+  padding: $offset8 $offset18;
+  @include border('medium');
+
+  &:hover,
+  &.active {
+    background-color: $red;
+  }
+}
