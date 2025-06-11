@@ -24,6 +24,10 @@
   padding: $offset8 $offset18;
   @include border('medium');
 
+  p {
+    color: $white;
+  }
+
   &:hover,
   &.active {
     background-color: $red;
