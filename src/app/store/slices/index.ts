@@ -1,1 +1,1 @@
-export { setField, removeField, exampleReducer } from './example'
+export { setUserData, userReducer } from './user'
