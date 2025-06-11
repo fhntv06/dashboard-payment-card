@@ -2,6 +2,7 @@
 @import '../../assets/styles/basics';
 
 $sizeIcon: 24px;
+$kSizeIcon: 24;
 
 .icon {
 	display: flex;
@@ -13,23 +14,35 @@ $sizeIcon: 24px;
 		width: 100%;
 	}
 	.small {
-		height: 12px;
-		width: 12px;
+		height: calc($sizeIcon / 2);
+		width: calc($sizeIcon / 2);
+
+		use {
+			transform: scale($kSizeIcon / ($kSizeIcon * 2));
+		}
 	}
 	.medium {
-		height: 16px;
-		width: 16px;
+		height: calc($sizeIcon * .667);
+		width: calc($sizeIcon * .667);
+
+		use {
+			transform: scale(($kSizeIcon * .667) / $kSizeIcon);
+		}
 	}
 	.big {
 		height: 24px;
 		width: 24px;
+
+		use {
+			transform: scale($sizeIcon * ($kSizeIcon * 1));
+		}
 	}
 	.large {
-		height: 32px;
-		width: 32px;
-	}
-	.logo {
-		width: 240px;
-		height: 94px;
+		height: calc($sizeIcon / 1.332);
+		width: calc($sizeIcon / 1.332);
+
+		use {
+			transform: scale($kSizeIcon / ($kSizeIcon * 1.332));
+		}
 	}
 }
