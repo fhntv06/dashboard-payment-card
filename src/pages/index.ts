@@ -1,2 +1,4 @@
 export { Main } from './main'
-export { UI } from './ui'
+export { Statistic } from './statistic'
+export { History } from './history'
+export { Role } from './role'

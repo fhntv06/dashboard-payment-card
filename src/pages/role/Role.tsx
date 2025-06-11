@@ -1,11 +1,11 @@
 import classNames from 'classnames/bind'
 
-import styles from './Main.module.scss'
+import styles from './Role.module.scss'
 import {Sidebar} from "../../widgets/Sidebar/Sidebar";
 
 const cx = classNames.bind(styles)
 
-export const Main = () => {
+export const Role = () => {
   return (
     <div className={cx('wrapper')}>
       <Sidebar />

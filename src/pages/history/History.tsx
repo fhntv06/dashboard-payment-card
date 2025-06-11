@@ -1,11 +1,11 @@
 import classNames from 'classnames/bind'
+import { Sidebar } from '../../widgets/Sidebar/Sidebar'
 
-import styles from './Main.module.scss'
-import {Sidebar} from "../../widgets/Sidebar/Sidebar";
+import styles from './History.module.scss'
 
 const cx = classNames.bind(styles)
 
-export const Main = () => {
+export const History = () => {
   return (
     <div className={cx('wrapper')}>
       <Sidebar />
