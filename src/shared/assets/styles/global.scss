@@ -1,10 +1,5 @@
 @import 'basics';
 
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter.woff2') format('woff2')
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +7,7 @@
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
 
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: $white;
 
   &::-webkit-scrollbar {
@@ -32,7 +27,6 @@ body {
   position: relative;
   margin: 0 auto;
   height: 100%;
-  background-color: $black;
 }
 h1, .h1 {
   font-size: $h1-size;

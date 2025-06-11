@@ -2,9 +2,9 @@
 
 @mixin border($size: 'small') {
 	@if $size == 'small' {
-		border-radius: 6px;
+		border-radius: 5px;
 	} @else if $size == 'medium' {
-		border-radius: 12px;
+		border-radius: 10px;
 	} @else if $size == 'large' {
 		border-radius: 24px;
 	} @else {
