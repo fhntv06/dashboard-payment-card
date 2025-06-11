@@ -14,19 +14,19 @@ $kSizeIcon: 24;
 		width: 100%;
 	}
 	.small {
-		height: calc($sizeIcon / 2);
-		width: calc($sizeIcon / 2);
+		height: math.div($sizeIcon, 2); // 12px
+		width: math.div($sizeIcon, 2); // 12px
 
 		use {
-			transform: scale($kSizeIcon / ($kSizeIcon * 2));
+			transform: scale(math.div($sizeIcon, $kSizeIcon * 2));
 		}
 	}
 	.medium {
-		height: calc($sizeIcon * .667);
-		width: calc($sizeIcon * .667);
+		height: calc($sizeIcon * .667); // 16px
+		width: calc($sizeIcon * .667); // 16px
 
 		use {
-			transform: scale(($kSizeIcon * .667) / $kSizeIcon);
+			transform: scale(math.div($kSizeIcon * .667, $kSizeIcon));
 		}
 	}
 	.big {
@@ -38,11 +38,11 @@ $kSizeIcon: 24;
 		}
 	}
 	.large {
-		height: calc($sizeIcon / 1.332);
-		width: calc($sizeIcon / 1.332);
+		height: calc($sizeIcon * 1.332);
+		width: calc($sizeIcon * 1.332);
 
 		use {
-			transform: scale($kSizeIcon / ($kSizeIcon * 1.332));
+			transform: scale(math.div($kSizeIcon, $kSizeIcon * 1.332));
 		}
 	}
 }
