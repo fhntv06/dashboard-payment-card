@@ -1,0 +1,45 @@
+@import '/src/shared/assets/styles/basics.scss';
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-text-container * {
+  color: $black;
+}
+
+.main-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 87px;
+  margin: 350px auto auto 189px;
+  //margin-left: 189px;
+  //margin-top: 303px;
+}
+
+.main-text-container h1 {
+  font-size: 104px;
+}
+
+.main-text-container h2 {
+  font-size: 80px;
+  line-height: 1;
+}
+
+
+.auth-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 524px;
+  padding: $offset28 $offset66 $offset48;
+  background-color: $black;
+  justify-content: space-between;
+  grid-gap: 285px;
+}
+
+.main-text-container h1,
+.auth-sidebar__title {
+  text-transform: uppercase;
+}

@@ -1,0 +1,2 @@
+export type InputTypes =
+  | 'gray'
