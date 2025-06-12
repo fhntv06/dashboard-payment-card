@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "ident_num": "1000213744",
+      "status_id": 10,
+      "status_name": "Создана",
+      "nominal": 10,
+      "dealer_id": 0,
+      "dealer_name": "Неизвестный дилер",
+      "secret_code": "FLMSTE",
+      "created_dt": "2025-05-17T14:05:11.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "full_name": "Тест юзер",
+      "login": "testuser",
+      "role": "Дилер",
+      "name": "Name",
+      "surname": "Surname",
+      "post": "Главный администратор",
+      "nickname": "@username",
+      "avatar": ""
+    }
+  ]
+}
