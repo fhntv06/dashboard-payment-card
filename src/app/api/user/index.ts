@@ -1,3 +1,4 @@
 import { get } from '../core'
 
-export const getUserData = (userId: number) => get(`/api/dashboard/user-info/${userId}`)
+export const getUsersData = () => get(`/users/`)
+export const getUserData = (userId: number) => get(`/users/${userId}`)
