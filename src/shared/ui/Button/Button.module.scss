@@ -17,8 +17,20 @@ a {
 	background-color: $orange;
 }
 .gray p,
+.red p,
 .orange p {
 	color: $white;
+}
+
+.red {
+    padding: $offset12 $offset16;
+    border-radius: 10px;
+	background-color: $red;
+	border: none;
+}
+
+.red:hover {
+    opacity: 0.8;
 }
 
 
