@@ -3,6 +3,31 @@
 button {
 
 }
+
 a {
-	text-decoration: none;
+  text-decoration: none;
+}
+
+.gray,
+.beige {
+  padding: $offset12 $offset16;
+  border-radius: 10px;
+}
+
+.beige {
+  border: 1px solid $extra-light-gray;
+  background: $beige;
+}
+
+.beige::placeholder {
+  color: $black;
+}
+
+.gray {
+  border: 1px solid $dark-gray;
+  background: $dark-black;
+}
+
+.gray::placeholder {
+  color: $white;
 }

@@ -1,34 +1,43 @@
-import React, { PropsWithChildren } from 'react';
 import classnames from "classnames/bind";
-import { IconType } from '../Icon/types';
 import { InputTypes } from './types';
-// import { Icon } from '../';
 
 import styles from './Input.module.scss';
 
-interface IProps extends PropsWithChildren {
-	sizeLeftIcon?: IconType,
-	sizeRightIcon?: IconType,
+interface IProps {
+	id?: string;
+	name?: string;
 	className?: string,
 	styleType?: InputTypes
 	type?: string,
 	disabled?: boolean,
-	onClick?: ((event: React.MouseEvent<HTMLElement>) => void)
 	active? : boolean,
+	placeholder?: string,
+	value?: string,
 }
 
 const cx = classnames.bind(styles);
 
 export const Input = ({
-	active = false,
+	id,
+	name,
 	className,
 	styleType = 'gray' as InputTypes,
 	type,
 	disabled,
-	onClick,
+	active = false,
+	placeholder,
+	value,
 }: IProps) => {
 	const classNames = cx(className, styleType, { active: active })
 	return (
-			<input className={classNames} type={type} disabled={disabled} onClick={onClick} />
+    <input
+      id={id}
+      name={name}
+      className={classNames}
+      type={type}
+      disabled={disabled}
+      placeholder={placeholder}
+      value={value}
+    />
 	)
 }
