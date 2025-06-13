@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 
 import { setUserData } from '../../app/store/slices'
-import { pathsRoutes, routes } from '../../app/routes'
+import { routes } from '../../app/routes'
 import { useDispatch } from '../../hooks'
 import { LoaderSpinner } from '../../shared'
 import { getUserData } from '../../app/api'
