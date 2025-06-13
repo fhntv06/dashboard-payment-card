@@ -16,7 +16,7 @@ export const Auth = () => {
 
         <div className={cx("main-text-container")}>
           <h2>Админ Панель</h2>
-          <h1 className={cx("font-w-extrabold")}>Карты онлайн</h1>
+          <h1 className={cx("font-w-extrabold")}>Карты оплаты</h1>
         </div>
       </main>
     </div>

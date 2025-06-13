@@ -39,6 +39,10 @@
   grid-gap: 285px;
 }
 
+.auth-sidebar * {
+  color: $white;
+}
+
 .main-text-container h1,
 .auth-sidebar__title {
   text-transform: uppercase;
