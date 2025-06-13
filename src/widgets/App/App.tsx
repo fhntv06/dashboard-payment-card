@@ -4,6 +4,7 @@ import {
   Route,
   BrowserRouter,
   Routes,
+  redirect,
 } from 'react-router-dom'
 
 import { setUserData } from '../../app/store/slices'
@@ -23,6 +24,7 @@ export const App: FC = () => {
         dispatch(setUserData({ ...data }))
 
         setIsLoading(false)
+        redirect(`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard`)
       })
       .catch((err) => {
         new Error('Ошибка в запросе: ' + err)
