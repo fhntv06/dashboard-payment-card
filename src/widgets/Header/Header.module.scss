@@ -1,0 +1,40 @@
+@import '/src/shared/assets/styles/basics.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: $offset16 $offset20;
+  box-shadow: 0 8px 16px rgba(0,0,0,15%);
+}
+.header__user {
+  display: flex;
+  column-gap: $offset16;
+}
+.header__user__content {
+  display: flex;
+  flex-direction: column;
+}
+.header__title-page {
+  display: flex;
+}
+.header__button-back {
+  position: relative;
+  top: 6px;
+  height: max-content;
+  cursor: pointer;
+}
+.user__post {
+  color: $large-gray;
+}
+.user__avatar {
+  height: 52px;
+  width: 52px;
+  @include border('medium');
+  background-color: $dark-white;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

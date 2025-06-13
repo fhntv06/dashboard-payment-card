@@ -1,0 +1,38 @@
+@import '/src/shared/assets/styles/basics.scss';
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 32px;
+  padding: $offset4;
+  @include border('small');
+
+  &.deactivation {
+    background-color: $gray;
+  }
+  &.not-activation {
+    background-color: $orange;
+  }
+  &.activation {
+    background-color: $green;
+
+    p {
+      color: $black;
+    }
+  }
+  &.used {
+    background-color: $light-blue;
+
+    p {
+      color: $blue;
+    }
+  }
+  &.not-activation,
+  &.deactivation {
+    p {
+      color: $white;
+    }
+  }
+}

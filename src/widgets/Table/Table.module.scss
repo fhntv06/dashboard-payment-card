@@ -1,0 +1,57 @@
+@import '/src/shared/assets/styles/basics.scss';
+
+.table {
+  display: flex;
+  flex-direction: column;
+  column-gap: $offset20;
+}
+.table__head {
+  display: flex;
+  justify-content: space-between;
+  column-gap: $offset20;
+  height: 32px;
+  margin-bottom: $offset4;
+}
+.table__head__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  .head__title-icon {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-sort--active {
+    fill: $black;
+  }
+}
+.table__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: $offset4;
+}
+.table__row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: $offset20;
+}
+.table__row__item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #EAEAEA;
+
+  p {
+    color: $gray;
+  }
+}
+.table__row__button-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid $black;
+  @include border('small');
+}

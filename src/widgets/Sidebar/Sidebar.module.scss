@@ -12,6 +12,7 @@
   margin-left: $offset18;
   margin-bottom: calc($offset18 * 3);
   text-transform: uppercase;
+  color: $white;
 }
 .sidebar__list {
   display: flex;
@@ -23,6 +24,10 @@
   column-gap: $offset16;
   padding: $offset8 $offset18;
   @include border('medium');
+
+  p {
+    color: $white;
+  }
 
   &:hover,
   &.active {

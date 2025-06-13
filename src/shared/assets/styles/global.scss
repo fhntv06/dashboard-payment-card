@@ -8,7 +8,7 @@
   scrollbar-width: none; /* for Firefox */
 
   font-family: "Montserrat", sans-serif;
-  color: $white;
+  color: $black;
 
   &::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
@@ -24,9 +24,7 @@ body {
   height: 100dvh;
 }
 #root {
-  position: relative;
-  margin: 0 auto;
-  height: 100%;
+  display: flex;
 }
 h1, .h1 {
   font-size: $h1-size;
@@ -54,7 +52,7 @@ h2, .h2 {
 p, .p {
   font-size: $p-size;
   line-height: 1.5;
-  font-weight: $font-w-bold;
+  font-weight: $font-w-regular;
 
   &.p-reg {
     font-weight: $font-w-regular;
@@ -98,4 +96,15 @@ button {
 }
 ul {
   list-style-type: none;
+}
+hr {
+  height: 1px;
+  width: 100%;
+  background-color: #EAEAEA;
+  border: none;
+}
+input {
+  outline: none;
+  background-color: unset;
+  border: none;
 }

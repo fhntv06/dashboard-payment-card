@@ -28,7 +28,7 @@ export const Button = ({
 	sizeLeftIcon = 'medium',
 	sizeRightIcon = 'medium',
 	className,
-	type = 'gray' as ButtonTypes,
+	type = 'none' as ButtonTypes,
 	iconLeftName,
 	iconRightName,
 	disabled,
@@ -39,14 +39,22 @@ export const Button = ({
 	const content = (
 		<>
 			{iconLeftName && <Icon className={cx('icon__left')} name={iconLeftName} size={sizeIcons || sizeLeftIcon} />}
-			{(children && iconLeftName && iconRightName) ? <span>{children}</span> : children}
+			<p className={cx('p-reg')}>{children}</p>
 			{iconRightName && <Icon className={cx('icon__right')} name={iconRightName} size={sizeIcons || sizeRightIcon} />}
 		</>
 	)
 	const classNames = cx(className, type, { active: active })
+
+	const onClickHandler = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+		if (onClick) {
+			event.preventDefault()
+			onClick(event)
+		}
+	}
+
 	return (
 		href
-			? <a href={href} className={classNames}>{content}</a>
-			: <button className={classNames} disabled={disabled} onClick={onClick}>{content}</button>
+			? <a href={href} className={classNames} onClick={onClickHandler}>{content}</a>
+			: <button className={cx('button', classNames)} disabled={disabled} onClick={onClickHandler}>{content}</button>
 	)
 }

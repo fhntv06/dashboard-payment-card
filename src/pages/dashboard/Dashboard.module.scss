@@ -1,0 +1,27 @@
+@import '/src/shared/assets/styles/pages/Pages.scss';
+
+.functions-button {
+  display: flex;
+  justify-content: space-between;
+
+  .functions-button__left,
+  .functions-button__right {
+    display: flex;
+    column-gap: $offset8;
+  }
+
+  .functions-button__create-card {
+    width: 15vw;
+  }
+  .functions-button__generate-excel {
+    width: 7vw;
+  }
+
+  .functions-button__create-card,
+  .functions-button__generate-excel {
+    min-width: max-content;
+  }
+}
+.table {
+  flex-grow: 1;
+}

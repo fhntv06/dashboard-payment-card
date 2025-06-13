@@ -1,5 +1,6 @@
-export { Main } from './main'
+export { Dashboard } from './dashboard'
 export { Statistic } from './statistic'
 export { History } from './history'
 export { Role } from './role'
 export { Auth } from './auth'
+export { Card } from './card'
