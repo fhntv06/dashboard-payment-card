@@ -3,12 +3,67 @@
     {
       "id": 1,
       "ident_num": "1000213744",
+      "status_id": 30,
+      "status_name": "Не активирована",
+      "nominal": 10,
+      "dealer_id": 0,
+      "dealer_name": "Не назначено",
+      "secret_code": "FLMSTE",
+      "created_dt": "2025-05-17T14:05:11.000Z"
+    },
+    {
+      "id": 2,
+      "ident_num": "1000213745",
+      "status_id": 40,
+      "status_name": "Aктивирована",
+      "nominal": 5,
+      "dealer_id": 1,
+      "dealer_name": "@thebestuser",
+      "secret_code": "6426е36542347862",
+      "created_dt": "2025-05-17T14:05:11.000Z"
+    },
+    {
+      "id": 3,
+      "ident_num": "1000213746",
+      "status_id": 99,
+      "status_name": "Утилизирована",
+      "nominal": 9,
+      "dealer_id": 2,
+      "dealer_name": "@myname",
+      "secret_code": "e216е36542347321",
+      "created_dt": "2025-05-17T14:05:11.000Z"
+    },
+    {
+      "id": 4,
+      "ident_num": "1000213747",
+      "status_id": 50,
+      "status_name": "Использована",
+      "nominal": 10,
+      "dealer_id": 3,
+      "dealer_name": "@myname13",
+      "secret_code": "e216е365sjad6321",
+      "created_dt": "2025-05-17T14:05:11.000Z"
+    },
+    {
+      "id": 5,
+      "ident_num": "1000213748",
       "status_id": 10,
       "status_name": "Создана",
       "nominal": 10,
-      "dealer_id": 0,
-      "dealer_name": "Неизвестный дилер",
-      "secret_code": "FLMSTE",
+      "dealer_id": 4,
+      "dealer_name": "@YouMyname",
+      "secret_code": "e216е365sjad6321",
+      "created_dt": "2025-05-17T14:05:11.000Z"
+    },
+    {
+      "id": 6,
+      "ident_num": "1000213749",
+      "status_id": 20,
+      "status_name": "В печати",
+      "nominal": 10,
+      "dealer_id": 5,
+      "dealer_name": "@myname1313",
+      "secret_code": "e216е365sjad6321",
       "created_dt": "2025-05-17T14:05:11.000Z"
     }
   ],
