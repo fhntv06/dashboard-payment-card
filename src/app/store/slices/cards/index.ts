@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
-import {ICards} from './types'
+import { ICards } from './types'
 
 const initialState: ICards = {
   data: [
