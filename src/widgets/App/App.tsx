@@ -36,10 +36,8 @@ export const App: FC = () => {
         <BrowserRouter>
           <Routes>
             {routes.map((route) => <Route key={route.path} {...route} />)}
-            <Route path={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/card`} Component={null}>
-              <Route path=":id" element={<Card />} Component={Card} />
-            </Route>
-            <Route path='*' element={<Navigate to={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/${pathsRoutes.dashboard}`}/>}/>
+            <Route path={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard/card/:id`} Component={Card} />
+            <Route path='*' element={<Navigate to={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard`}/>}/>
           </Routes>
         </BrowserRouter>
       )

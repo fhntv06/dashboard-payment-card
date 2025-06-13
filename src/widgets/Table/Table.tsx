@@ -135,7 +135,7 @@ export const Table = ({ data, className }: IProps) => {
                 <SecretCode code={String(item.secret_code)} />
               </div>
               <div className={cx('table__row__item')} style={{ minWidth: 100, border: 'none' }}>
-                <NavLink to={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/card/${item.id}`} className={cx('table__row__button-open')}>
+                <NavLink to={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard/card/${item.id}`} className={cx('table__row__button-open')}>
                   {/*<Icon name='arrow-right' />*/}
                   <svg id="arrow-right" width="12" height="19" viewBox="0 0 12 19" fill="none">
                     <path fillRule="evenodd" clipRule="evenodd"
