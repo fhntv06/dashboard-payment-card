@@ -1,8 +1,24 @@
 @import '../../assets/styles/basics.scss';
 
-button {
-
+.button {
+	padding: $offset8 $offset16;
+	@include border('medium')
 }
 a {
 	text-decoration: none;
 }
+.green {
+	background-color: $green;
+}
+.gray {
+	background-color: $gray;
+}
+.orange {
+	background-color: $orange;
+}
+.gray p,
+.orange p {
+	color: $white;
+}
+
+
