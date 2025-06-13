@@ -1,0 +1,29 @@
+@import '/src/shared/assets/styles/basics.scss';
+
+.checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #F4F4F4;
+  @include border('small');
+  border: 1px solid $extra-light-gray;
+  cursor: pointer;
+
+  input {
+    pointer-events: none;
+    opacity: 0;
+  }
+  input:checked + .checkbox-icon {
+    opacity: 1;
+  }
+}
+.checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+}
