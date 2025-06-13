@@ -1,0 +1,35 @@
+@import '/src/shared/assets/styles/basics.scss';
+
+.pagination {
+  display: flex;
+  align-items: center;
+  column-gap: $offset20;
+}
+.pagination__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid $black;
+  @include border('small');
+
+  &.pagination__button--disabled {
+    pointer-events: none;
+    opacity: .4;
+  }
+
+  &:hover {
+    background-color: $light-blue;
+  }
+}
+.pagination__input {
+  flex-basis: 70px;
+  width: 100%;
+  padding: $offset8;
+  background-color: #EBEBEB;
+  border: 1px solid #A9A9A9;
+  text-align: center;
+  @include border('medium');
+}
