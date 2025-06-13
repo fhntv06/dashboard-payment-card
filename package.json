@@ -10,7 +10,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "gh-pages": "gh-pages -b main -d build"
+    "gh-pages": "gh-pages -b main -d build",
+    "json-server": "npx json-server db.json -p 3001"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
