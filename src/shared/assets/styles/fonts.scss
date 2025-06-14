@@ -12,6 +12,7 @@ $p-x-small-size: 8px;
 $font-w-regular: 400;
 $font-w-semibold: 500;
 $font-w-bold: 600;
+$font-w-extrabold: 800;
 
 .font-w-regular {
   font-weight: $font-w-regular !important;
@@ -21,4 +22,7 @@ $font-w-bold: 600;
 }
 .font-w-bold {
   font-weight: $font-w-bold !important;
+}
+.font-w-extrabold {
+  font-weight: $font-w-extrabold !important;
 }
