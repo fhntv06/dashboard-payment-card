@@ -6,21 +6,42 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: max-content;
+  height: 100%;
   padding: $offset8 $offset16;
-
-  * {
-    z-index: 1;
-  }
 }
-
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: $offset16;
+  width: 455px;
+  height: max-content;
+  padding: $offset16;
+  background-color: $white;
+  @include border('medium');
+  box-shadow: 0 4px 16px rgba(0,0,0,50%);
+  transform: translate(-50%, -50%);
+}
+.button-close {
+  position: absolute;
+  top: $offset16;
+  right: $offset16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  @include border('small');
+  background-color: $red;
+}
 .blur {
-  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  backdrop-filter: blur(5px);
-  background: #1C1C1E52;
+  background-color: rgba(0,0,0,29%);
 }
