@@ -16,7 +16,7 @@ interface IProps {
 
 export const PasswordInput = ({pass, className, placeholder, disabled}: IProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
-  console.log(pass)
+
   const changeVisible = () => {
     setIsVisible(!isVisible)
   }
@@ -36,15 +36,3 @@ export const PasswordInput = ({pass, className, placeholder, disabled}: IProps) 
 
   )
 }
-
-// function show_hide_password(target){
-// var input = document.getElementById('password-input');
-// if (input.getAttribute('type') == 'password') {
-//   target.classList.add('view');
-//   input.setAttribute('type', 'text');
-// } else {
-//   target.classList.remove('view');
-//   input.setAttribute('type', 'password');
-// }
-// return false;
-// }
