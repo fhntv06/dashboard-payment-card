@@ -33,12 +33,12 @@ export const Select = ({ data, className = '', typeStyle = '' }: ISelect) => {
     <div className={cx('select', className, typeStyle)}>
       <button className={cx('select__header')} onClick={handleDropdownToggle} disabled={disabled}>
         <div className={cx('select__header-left')}>
-          {(selectedOption.icon.indexOf('image/png') === -1)
+          {/* {(selectedOption.icon.indexOf('image/png') === -1)
             ? <Icon className={cx('select__icon')} name={selectedOption.icon} size='big'/>
             : <img src={selectedOption.icon}  alt='icon' />
-          }
+          } */}
           {/* @ts-ignore */}
-          <p>{selectedOption.customText ? selectedOption.name : arLanguagesPhraseSite[name][selectedOption.name]}</p>
+          <p>{selectedOption.name}</p>
         </div>
         <Icon name={isOpen ? 'arrow-up' : 'arrow-down'} size='big' />
       </button>
@@ -69,14 +69,14 @@ export const Select = ({ data, className = '', typeStyle = '' }: ISelect) => {
                     }
                   }}
                 >
-                  {(item.icon.indexOf('image/png') === -1 && item.icon.indexOf('.png') === -1)
+                  {/* {(item.icon.indexOf('image/png') === -1 && item.icon.indexOf('.png') === -1)
                     ? <Icon className={cx('select__icon')} name={item.icon} size='big'/>
                     : <img src={item.icon} alt='icon' />
-                  }
+                  } */}
                   {/* @ts-ignore */}
-                  <p>{item.customText ? item.name : arLanguagesPhraseSite[name][item.name]}</p>
+                  <p>{item.name}</p>
                   {/* @ts-ignore */}
-                  {item.rightText && <p className={cx('select__item__right-text', 'p-x-small')}>{arLanguagesPhraseSite[name][item.rightText]}</p>}
+                  {/* {item.rightText && <p className={cx('select__item__right-text', 'p-x-small')}>{arLanguagesPhraseSite[name][item.rightText]}</p>} */}
                 </li>
               )
             ))}

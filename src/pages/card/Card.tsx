@@ -4,7 +4,8 @@ import classNames from 'classnames/bind'
 
 import { getCardData } from '../../app/api'
 import { Header, Sidebar } from '../../widgets'
-import { SecretCode, Status, DealerName } from '../../widgets/Table/ui'
+import { HiddenField } from '../../feature'
+import { Status, DealerName } from '../../widgets/Table/ui'
 import { ICard, IColumn } from '../../widgets/Table/type'
 
 import styles from './Card.module.scss'
@@ -78,7 +79,7 @@ export const Card = () => {
                   <DealerName id={data.dealer_id} name={data.dealer_name} />
                 </div>
                 <div className={cx('table__row__item')} style={{ minWidth: columns[5].width }}>
-                  <SecretCode code={String(data.secret_code)} />
+                  <HiddenField code={String(data.secret_code)} />
                 </div>
               </div>
             </div>

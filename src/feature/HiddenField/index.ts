@@ -1,2 +1,1 @@
 export { HiddenField } from './HiddenField'
-export { Pagination } from './Pagination'
