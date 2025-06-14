@@ -1,0 +1,18 @@
+@import '/src/shared/assets/styles/basics.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container h1 {
+  margin-bottom: 40px;
+  color: $white;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: $offset32;
+}
+.submit {
+  max-width: 220px;
+}
