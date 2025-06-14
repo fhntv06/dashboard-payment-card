@@ -8,11 +8,11 @@ import {
 } from 'react-router-dom'
 
 import { setUserData } from '../../app/store/slices'
-import { routes } from '../../app/routes'
+import { routes, pathsRoutes } from '../../app/routes'
 import { useDispatch } from '../../hooks'
 import { LoaderSpinner } from '../../shared'
 import { getUserData } from '../../app/api'
-import { Card } from '../../pages'
+import { Card, Auth } from '../../pages'
 
 export const App: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
@@ -38,8 +38,9 @@ export const App: FC = () => {
         <BrowserRouter>
           <Routes>
             {routes.map((route) => <Route key={route.path} {...route} />)}
-            <Route path={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard/card/:id`} Component={Card} />
-            <Route path='*' element={<Navigate to={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard`}/>}/>
+            <Route path={`${pathsRoutes.auth}`} Component={Auth} />
+            <Route path={`${pathsRoutes.card}/:id`} Component={Card} />
+            <Route path='*' element={<Navigate to={`${pathsRoutes.dashboard}`}/>}/>
           </Routes>
         </BrowserRouter>
       )
