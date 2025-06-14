@@ -1,3 +1,4 @@
 export * from './Button/types'
 export * from './Icon/types'
+export * from './ModalWrapper/types'
 export * from './Select/types'

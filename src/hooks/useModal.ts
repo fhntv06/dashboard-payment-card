@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IModalTypes } from "../widgets/Modal/types.ts";
+import { IModalTypes } from '../shared/types'
 
 export const useModal = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

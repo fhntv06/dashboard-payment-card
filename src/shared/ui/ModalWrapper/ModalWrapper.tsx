@@ -2,10 +2,13 @@ import React from 'react'
 import { motion, useWillChange } from 'framer-motion'
 import classNames from 'classnames/bind'
 
-import styles from './Modal.module.scss'
+import styles from './ModalWrapper.module.scss'
 
 import { IModalTypes } from './types'
-import { AnimationWrapper, Icon } from '../../shared'
+import {
+  AnimationWrapper,
+  // Icon
+} from '../'
 
 const cx = classNames.bind(styles)
 
@@ -16,7 +19,7 @@ interface IProps {
   children: React.ReactNode
 }
 
-export const Modal = ({
+export const ModalWrapper = ({
   isOpen = false,
   closeHandler,
   children

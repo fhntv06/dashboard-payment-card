@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind'
 
-import { Button, Select } from '../../shared'
+import { Button, Select } from '../'
 
 import styles from './CreateCardModal.module.scss'
 

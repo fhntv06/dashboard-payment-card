@@ -1,4 +1,4 @@
-import { IModalTypes } from '../../../widgets/types'
+import { IModalTypes } from '../../../shared/types'
 
 export interface ModalContextTypes {
   isOpen:  boolean,

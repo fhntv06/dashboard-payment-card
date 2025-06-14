@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useModal } from '../../../hooks'
 import { ModalContext } from '../../contexts'
-import { Modal, CreateCardModal } from '../../../widgets'
+import { ModalWrapper, CreateCardModal } from '../../../shared'
 
 interface IProps {
   children: React.ReactNode
@@ -14,9 +14,9 @@ export const ModalProvider = ({ children }: IProps) => {
   return (
     <ModalContext.Provider value={{ isOpen, openHandler, closeHandler, toggleHandler }}>
       {children}
-      <Modal isOpen={isOpen} typeModal={typeModal} closeHandler={closeHandler}>
-        {typeModal === 'create__card' && <CreateCardModal closeHandler={closeHandler} />}
-      </Modal>
+      <ModalWrapper isOpen={isOpen} typeModal={typeModal} closeHandler={closeHandler}>
+        {typeModal === 'create__card' && <CreateCardModal />}
+      </ModalWrapper>
     </ModalContext.Provider>
   )
 }
