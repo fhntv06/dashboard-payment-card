@@ -1,0 +1,10 @@
+@import '/src/shared/assets/styles/basics.scss';
+
+.input {
+  width: 100%;
+  padding: $offset16 $offset12;
+  background-color: #F4F4F4;
+  border: 1px solid #DADADA;
+  @include border('medium');
+  color: $gray;
+}
