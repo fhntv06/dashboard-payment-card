@@ -14,11 +14,15 @@ export const pathsRoutes: {
   statistic: string
   history: string
   role: string
+  card: string
+  auth: string
 } = {
   dashboard: `${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard`,
   statistic: `${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/statistic`,
   history: `${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/history`,
   role: `${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/role`,
+  card: `${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/card`,
+  auth: `${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/auth`,
 }
 
 export const routes: Route[] = [
