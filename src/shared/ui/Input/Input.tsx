@@ -1,26 +1,28 @@
 import classNames from 'classnames/bind'
 
+import { InputTypes } from './types'
+
 import styles from './Input.module.scss'
 
 const cx = classNames.bind(styles)
 
 interface IProps {
-  name: string
-  className: string
-	value: string
-	placeholder: string
+	name?: string
+	value: string,
 	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-	type?: string
-	required?: boolean
-	disabled?: boolean
+	type: InputTypes,
+	placeholder?: string,
+	required: boolean
+	disabled: boolean
+	className?: string
 }
 
 export const Input = ({
-  name = 'input',
-	value,
+	name = '',
+	type = 'beige',
 	placeholder,
+	value,
 	onChange,
-	type = 'text',
 	required = false,
 	disabled = false,
 	className,
@@ -30,7 +32,7 @@ export const Input = ({
       name={name}
 			value={value}
 			type={type}
-			className={cx('input', 'p-medium', className)}
+			className={cx('input', 'p-medium', type, className)}
 			placeholder={placeholder}
 			onChange={(e) => onChange(e)}
 			disabled={disabled}

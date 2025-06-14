@@ -1,10 +1,26 @@
+
 @import '/src/shared/assets/styles/basics.scss';
 
 .input {
   width: 100%;
-  padding: $offset16 $offset12;
-  background-color: #F4F4F4;
-  border: 1px solid #DADADA;
+  padding: $offset12 $offset16;
+  border: 1px solid transparent;
   @include border('medium');
   color: $gray;
+}
+.beige {
+  border-color: $extra-light-gray;
+  background-color: $beige;
+
+  &::placeholder {
+    color: $gray;
+  }
+}
+.black {
+  border-color: $dark-gray;
+  background-color: $dark-black;
+
+  &::placeholder {
+    color: $white;
+  }
 }
