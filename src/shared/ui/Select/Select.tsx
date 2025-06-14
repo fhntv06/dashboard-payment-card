@@ -40,7 +40,7 @@ export const Select = ({ data, className = '', typeStyle = '' }: ISelect) => {
           {/* @ts-ignore */}
           <p>{selectedOption.name}</p>
         </div>
-        <Icon name={isOpen ? 'arrow-up' : 'arrow-down'} size='big' />
+        <Icon name='arrow-down' size='big' className={cx('select__arrow', { 'select__arrow--opened': isOpen })} />
       </button>
       <AnimatePresence>
         {(data.length > 1 && isOpen) && (

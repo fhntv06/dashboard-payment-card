@@ -15,6 +15,10 @@ const nominalData = [
     name: '20',
     active: false
   },
+  {
+    name: '30',
+    active: false
+  },
 ]
 
 const dealerData = [
@@ -24,6 +28,10 @@ const dealerData = [
   },
   {
     name: 'dealer2',
+    active: false
+  },
+    {
+    name: 'dealer3',
     active: false
   },
 ]

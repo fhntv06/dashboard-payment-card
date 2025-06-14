@@ -18,7 +18,6 @@
   width: 100%;
   padding: $offset12;
   margin-bottom: 2px;
-  background-color: $dark-gray;
   @include border('medium');
   cursor: pointer;
 }
@@ -35,11 +34,15 @@
 .select__list {
   max-height: 200px;
   padding: 0 $offset12;
-  background-color: $dark-gray;
   @include border('medium');
   list-style-type: none;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+.select__header,
+.select__list {
+  background-color: #F4F4F4;
+  border: 1px solid #DADADA;
 }
 .select__item {
   display: flex;
@@ -60,16 +63,19 @@
       color: $light-gray;
     }
   }
-
-  &:active,
-  &:focus {
-    background-color: $black;
-  }
   &:not(:last-child) {
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid $light-gray;
   }
 }
 .select__header,
 .select__item {
   text-transform: capitalize;
+}
+.select__arrow {
+  transition: transform .5s ease-out;
+
+  &.select__arrow--opened {
+    transform: rotateZ(180deg);
+    transition: transform .3s ease-in;
+  }
 }
