@@ -6,6 +6,7 @@
   width: 100%;
 }
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: $offset16;
