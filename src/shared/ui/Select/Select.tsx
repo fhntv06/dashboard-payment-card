@@ -8,7 +8,7 @@ import styles from './Select.module.scss'
 
 const cx = classNames.bind(styles)
 
-export const Select = ({ data, className = '', typeStyle = '' }: ISelect) => {
+export const Select = ({ data, setData, className = '', typeStyle = '' }: ISelect) => {
   const willChange = useWillChange()
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [disabled, setDisabled] = useState<boolean>(false)
@@ -25,6 +25,7 @@ export const Select = ({ data, className = '', typeStyle = '' }: ISelect) => {
     if (!option.blockSelect) setSelectedOption(option)
     handleDropdownToggle()
 
+    setData(option.name)
     // if (option.action === 'topUp') openHandlerModal('create__card')
   }
 
@@ -38,7 +39,7 @@ export const Select = ({ data, className = '', typeStyle = '' }: ISelect) => {
             : <img src={selectedOption.icon}  alt='icon' />
           } */}
           {/* @ts-ignore */}
-          <p>{selectedOption.name}</p>
+          <p className={cx('p-medium')}>{selectedOption.name}</p>
         </div>
         <Icon name='arrow-down' size='big' className={cx('select__arrow', { 'select__arrow--opened': isOpen })} />
       </button>
@@ -74,7 +75,7 @@ export const Select = ({ data, className = '', typeStyle = '' }: ISelect) => {
                     : <img src={item.icon} alt='icon' />
                   } */}
                   {/* @ts-ignore */}
-                  <p>{item.name}</p>
+                  <p className={cx('p-medium')}>{item.name}</p>
                   {/* @ts-ignore */}
                   {/* {item.rightText && <p className={cx('select__item__right-text', 'p-x-small')}>{arLanguagesPhraseSite[name][item.rightText]}</p>} */}
                 </li>

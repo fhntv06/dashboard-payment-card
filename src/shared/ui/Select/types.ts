@@ -14,6 +14,7 @@ export type ITypeSelect = '' | 'light'
 
 export interface ISelect {
   data: ISelectOption[]
+  setData: (name: string) => void
   typeStyle?: ITypeSelect
   className?: string
 }

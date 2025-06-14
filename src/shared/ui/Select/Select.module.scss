@@ -1,10 +1,9 @@
 @import '../../assets/styles/basics';
 
 .select {
-  p {
-    font-weight: $font-w-regular;
-  }
-  &.light {
+  position: relative;
+
+  &.select__type-light {
     .select__header,
     .select__list {
       background-color: $white;
