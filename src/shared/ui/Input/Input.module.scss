@@ -6,13 +6,13 @@
   padding: $offset12 $offset16;
   border: 1px solid transparent;
   @include border('medium');
-  color: $gray;
 }
 .beige {
   border-color: $extra-light-gray;
   background-color: $beige;
+  color: $gray;
 
-  &::placeholder {
+  &, &::placeholder {
     color: $gray;
   }
 }
@@ -20,7 +20,7 @@
   border-color: $dark-gray;
   background-color: $dark-black;
 
-  &::placeholder {
+  &, &::placeholder {
     color: $white;
   }
 }

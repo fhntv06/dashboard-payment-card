@@ -58,7 +58,7 @@
   flex-shrink: 0;
   flex-grow: 1;
   padding: $offset16 $offset24;
-  background-color: #F4F4F4;
+  background-color: $beige;
   border: 1px solid $extra-light-gray;
   @include border('medium');
   color: #828282;

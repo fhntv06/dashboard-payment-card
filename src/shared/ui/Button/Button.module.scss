@@ -1,7 +1,7 @@
-@import '../../assets/styles/basics.scss';
+@import '/src/shared/assets/styles/basics.scss';
 
 .button {
-	padding: $offset8 $offset16;
+	padding: $offset12 $offset16;
 	@include border('medium');
 
 	&:disabled {
@@ -21,9 +21,11 @@ a {
 .orange {
 	background-color: $orange;
 }
-.gray p,
-.orange p {
-	color: $white;
+.red {
+	background-color: $red;
 }
-
-
+.gray, .red, .orange {
+	p {
+		color: $white;
+	}
+}

@@ -4,7 +4,7 @@
   position: relative;
   width: 20px;
   height: 20px;
-  background-color: #F4F4F4;
+  background-color: $beige;
   @include border('small');
   border: 1px solid $extra-light-gray;
   cursor: pointer;

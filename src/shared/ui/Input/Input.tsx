@@ -10,11 +10,11 @@ interface IProps {
 	name?: string
 	value: string,
 	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-	type: InputTypes,
-	typeStyle: InputStyleTypes,
+	type?: InputTypes,
+	typeStyle?: InputStyleTypes,
 	placeholder?: string,
-	required: boolean
-	disabled: boolean
+	required?: boolean
+	disabled?: boolean
 	className?: string
 }
 
