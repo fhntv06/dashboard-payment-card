@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { ModalProvider, NotificationProvider} from '../'
+import { NotificationProvider} from '../'
 
 import store from '../../store'
 
@@ -12,9 +12,7 @@ export const Providers = ({ children }: IProps) => {
 	return (
 		<Provider store={store}>
 			<NotificationProvider>
-				<ModalProvider>
-					{children}
-				</ModalProvider>
+				{children}
 			</NotificationProvider>
 		</Provider>
 	)

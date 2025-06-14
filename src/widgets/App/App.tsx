@@ -4,10 +4,11 @@ import {
   Route,
   BrowserRouter,
   Routes,
+  redirect,
 } from 'react-router-dom'
 
 import { setUserData } from '../../app/store/slices'
-import { pathsRoutes, routes } from '../../app/routes'
+import { routes } from '../../app/routes'
 import { useDispatch } from '../../hooks'
 import { LoaderSpinner } from '../../shared'
 import { getUserData } from '../../app/api'
@@ -23,6 +24,7 @@ export const App: FC = () => {
         dispatch(setUserData({ ...data }))
 
         setIsLoading(false)
+        redirect(`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard`)
       })
       .catch((err) => {
         new Error('Ошибка в запросе: ' + err)
@@ -36,10 +38,8 @@ export const App: FC = () => {
         <BrowserRouter>
           <Routes>
             {routes.map((route) => <Route key={route.path} {...route} />)}
-            <Route path={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/card`} Component={null}>
-              <Route path=":id" element={<Card />} Component={Card} />
-            </Route>
-            <Route path='*' element={<Navigate to={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/${pathsRoutes.dashboard}`}/>}/>
+            <Route path={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard/card/:id`} Component={Card} />
+            <Route path='*' element={<Navigate to={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard`}/>}/>
           </Routes>
         </BrowserRouter>
       )

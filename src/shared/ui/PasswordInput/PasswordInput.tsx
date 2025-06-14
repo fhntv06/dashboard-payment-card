@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Icon } from '../../ui'
-import { Input } from '../../ui'
+import { Icon } from '../index.ts'
+import { Input } from '../index.ts'
 import classNames from 'classnames/bind'
 
 import styles from './PasswordInput.module.scss';

@@ -1,7 +1,7 @@
 export interface ISelectOption {
   name: string
   customText?: boolean
-  icon: string
+  icon?: string
   action?: string
   blockSelect?: boolean
   onClick?: () => void

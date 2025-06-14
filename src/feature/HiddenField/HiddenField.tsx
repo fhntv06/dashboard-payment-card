@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import classNames from 'classnames/bind'
 
-import styles from './SecretCode.module.scss'
+import styles from './HiddenField.module.scss'
 // import {Icon} from "../../../../shared";
 
 const cx = classNames.bind(styles)
@@ -11,7 +11,7 @@ interface IProps {
   className?: string
 }
 
-export const SecretCode = ({ code, className }: IProps) => {
+export const HiddenField = ({ code, className }: IProps) => {
   const [isVisible, setVisible] = useState<boolean>(false)
 
   const visibleHandler = () => {

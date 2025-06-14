@@ -2,12 +2,13 @@ import { useMemo, useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import classNames from 'classnames/bind'
 
-import { Status, SecretCode, DealerName } from './ui'
+import { HiddenField } from '../../feature'
 import {
   Checkbox,
   // Icon
 } from '../../shared'
 import { IColumn, ICard } from './type'
+import { Status, DealerName } from './ui'
 
 import styles from './Table.module.scss'
 
@@ -132,10 +133,10 @@ export const Table = ({ data, className }: IProps) => {
                 <DealerName id={item.dealer_id} name={item.dealer_name} />
               </div>
               <div className={cx('table__row__item')} style={{ minWidth: columns[5].width }}>
-                <SecretCode code={String(item.secret_code)} />
+                <HiddenField code={String(item.secret_code)} />
               </div>
               <div className={cx('table__row__item')} style={{ minWidth: 100, border: 'none' }}>
-                <NavLink to={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/card/${item.id}`} className={cx('table__row__button-open')}>
+                <NavLink to={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard/card/${item.id}`} className={cx('table__row__button-open')}>
                   {/*<Icon name='arrow-right' />*/}
                   <svg id="arrow-right" width="12" height="19" viewBox="0 0 12 19" fill="none">
                     <path fillRule="evenodd" clipRule="evenodd"

@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 import { ICards } from './types'
 
 const initialState: ICards = {
@@ -6,8 +6,8 @@ const initialState: ICards = {
     {
       id: 0,
       ident_num: '',
-      status_id: 0,
-      status_name: '',
+      status_id: 10,
+      status_name: 'Активирована',
       nominal: 0,
       dealer_id: 0,
       dealer_name: '',
