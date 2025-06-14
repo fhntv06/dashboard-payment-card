@@ -133,7 +133,7 @@ export const Table = ({ data, className }: IProps) => {
                 <DealerName id={item.dealer_id} name={item.dealer_name} />
               </div>
               <div className={cx('table__row__item')} style={{ minWidth: columns[5].width }}>
-                <HiddenText code={String(item.secret_code)} />
+                <HiddenText text={String(item.secret_code)} />
               </div>
               <div className={cx('table__row__item')} style={{ minWidth: 100, border: 'none' }}>
                 <NavLink to={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard/card/${item.id}`} className={cx('table__row__button-open')}>

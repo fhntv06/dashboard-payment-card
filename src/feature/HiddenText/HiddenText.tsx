@@ -7,11 +7,11 @@ import styles from './HiddenText.module.scss'
 const cx = classNames.bind(styles)
 
 interface IProps {
-  code: string
+  text: string
   className?: string
 }
 
-export const HiddenText = ({ code, className }: IProps) => {
+export const HiddenText = ({ text, className }: IProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
 
   const visibleHandler = () => {
@@ -20,7 +20,7 @@ export const HiddenText = ({ code, className }: IProps) => {
 
   return (
     <div className={cx('secret-code', className)} onClick={visibleHandler}>
-      <p className={cx('p-medium font-w-bold')}>{isVisible ? code : '*******************'}</p>
+      <p className={cx('p-medium font-w-bold')}>{isVisible ? text : '*******************'}</p>
       {isVisible ? (
         // <Icon name='eye-close' size='big' />
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">

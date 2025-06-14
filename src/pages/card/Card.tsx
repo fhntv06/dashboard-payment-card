@@ -4,7 +4,7 @@ import classNames from 'classnames/bind'
 
 import { getCardData } from '../../app/api'
 import { Header, Sidebar } from '../../widgets'
-import { HiddenField } from '../../feature'
+import { HiddenText } from '../../feature'
 import { Status, DealerName } from '../../widgets/Table/ui'
 import { ICard, IColumn } from '../../widgets/Table/type'
 
@@ -79,7 +79,7 @@ export const Card = () => {
                   <DealerName id={data.dealer_id} name={data.dealer_name} />
                 </div>
                 <div className={cx('table__row__item')} style={{ minWidth: columns[5].width }}>
-                  <HiddenField code={String(data.secret_code)} />
+                  <HiddenText text={String(data.secret_code)} />
                 </div>
               </div>
             </div>
