@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 268px;
+  min-width: 268px;
   padding: $offset20;
   background-color: $black;
 }

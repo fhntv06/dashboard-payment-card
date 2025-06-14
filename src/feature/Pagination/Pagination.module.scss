@@ -2,8 +2,9 @@
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  column-gap: $offset20;
+  gap: $offset20;
 }
 .pagination__button {
   display: flex;

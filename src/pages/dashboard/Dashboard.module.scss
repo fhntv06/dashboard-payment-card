@@ -2,7 +2,9 @@
 
 .functions-button {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: $offset20;
 
   .functions-button__left,
   .functions-button__right {
