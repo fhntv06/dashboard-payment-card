@@ -2,7 +2,12 @@
 
 .button {
 	padding: $offset8 $offset16;
-	@include border('medium')
+	@include border('medium');
+
+	&:disabled {
+		pointer-events: none;
+		opacity: .5;
+	}
 }
 a {
 	text-decoration: none;
