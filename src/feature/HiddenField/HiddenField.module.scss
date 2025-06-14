@@ -1,13 +1,14 @@
 @import '/src/shared/assets/styles/basics.scss';
 
-.secret-code {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 10px;
-  width: 100%;
-
-  p {
-    color: $gray;
-  }
+.input {
+	position: relative;
+	width: 100%;
+}
+.visible-control {
+	position: absolute;
+	top: $offset12;
+	right: $offset16;
+	display: inline-block;
+	width: 24px;
+	height: 16px;
 }
