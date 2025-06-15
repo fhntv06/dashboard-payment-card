@@ -16,8 +16,7 @@ interface IProps {
 }
 
 export const Header = ({ title, isDetail = false }: IProps) => {
-  const navigate = useNavigate();
-
+  const navigate = useNavigate()
   const { name, surname, post, nickname, avatar } = useSelector((state) => state.userData)
   
   return (

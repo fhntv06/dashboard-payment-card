@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import classNames from 'classnames/bind'
 
-import { routes } from '../../app/routes'
+import { sideBarMenuRoutes } from '../../app/routes'
 import { Icon } from '../../shared'
 
 import styles from './Sidebar.module.scss'
@@ -13,7 +13,7 @@ export const Sidebar = () => {
     <nav className={cx('sidebar')}>
       <h3 className={cx('sidebar__title')}>Карты оплаты</h3>
       <ul className={cx('sidebar__list')}>
-        {routes.map((route) => (
+        {sideBarMenuRoutes.map((route) => (
           <NavLink
             key={route.path}
             to={route.path}

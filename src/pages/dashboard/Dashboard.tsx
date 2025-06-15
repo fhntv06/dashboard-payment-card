@@ -10,6 +10,7 @@ import { Wrapper, Table } from '../../widgets'
 import { Pagination } from '../../feature'
 import { useDispatch, useSelector } from '../../hooks'
 import { Button } from '../../shared'
+import { ITEMS_PER_PAGE } from '../../shared/constants'
 
 import styles from './Dashboard.module.scss'
 
@@ -21,9 +22,9 @@ const Page = () => {
   const { data: cardsData } = useSelector((state) => state.cardsData)
   const dispatch = useDispatch()
 
-  const [totalPages, setTotalPages] = useState<number>(3)
+  const [totalPages, setTotalPages] = useState<number>(1)
   const [totalItems, setTotalItems] = useState<number>(0)
-  const [itemsPerPage] = useState<number>(2)
+  const [itemsPerPage] = useState<number>(ITEMS_PER_PAGE)
   const [page, setPage] = useState<number>(Number(searchParams.get('page')) || 1)
 
   const activationHandler = () => {
@@ -63,7 +64,7 @@ const Page = () => {
   }, [page])
 
   return (
-      <>
+    <>
       <div className={cx('search-wrapper')}>
         <h3>Search component</h3>
       </div>
@@ -89,7 +90,7 @@ const Page = () => {
         totalPages={totalPages}
         totalItems={totalItems}
       />
-      </>
+    </>
   )
 }
 
