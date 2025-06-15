@@ -1,48 +1,22 @@
-import { type FC, useEffect, useState } from 'react'
+import { type FC } from 'react'
 import {
   Navigate,
   Route,
   BrowserRouter,
   Routes,
-  redirect,
 } from 'react-router-dom'
-
-import { setUserData } from '../../app/store/slices'
-import { routes, pathsRoutes } from '../../app/routes'
-import { useDispatch } from '../../hooks'
-import { LoaderSpinner } from '../../shared'
-import { getUserData } from '../../app/api'
-import { Card, Auth } from '../../pages'
+import { privateRoutes, pathsRoutes } from '../../app/routes'
+import { PrivateRoute } from '../../widgets'
 
 export const App: FC = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(true)
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    getUserData(1)
-      .then(({ data }) => {
-        dispatch(setUserData({ ...data }))
-
-        setIsLoading(false)
-        redirect(`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}/dashboard`)
-      })
-      .catch((err) => {
-        new Error('Ошибка в запросе: ' + err)
-      })
-  }, [])
-
   return (
-    isLoading
-      ? <LoaderSpinner />
-      : (
-        <BrowserRouter>
-          <Routes>
-            {routes.map((route) => <Route key={route.path} {...route} />)}
-            <Route path={`${pathsRoutes.auth}`} Component={Auth} />
-            <Route path={`${pathsRoutes.card}/:id`} Component={Card} />
-            <Route path='*' element={<Navigate to={`${pathsRoutes.dashboard}`}/>}/>
-          </Routes>
-        </BrowserRouter>
-      )
+    <BrowserRouter>
+      <Routes>
+        <Route path={`${import.meta.env.VITE_PUBLIC_PATH_FOR_GITHUB_PAGES}`} element={<PrivateRoute />}>
+          {privateRoutes.map((route) => <Route key={route.path} {...route} />)}
+        </Route>
+        <Route path='*' element={<Navigate to={`${pathsRoutes.dashboard}`}/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
