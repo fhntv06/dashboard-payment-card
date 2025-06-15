@@ -12,6 +12,7 @@
 
   h1 {
     font-size: 80px;
+    margin-bottom: $offset48;
   }
   p {
     font-size: 104px;
@@ -23,13 +24,18 @@
   width: 524px;
   padding: $offset28 $offset64 $offset48;
   background-color: $black;
-  justify-content: space-between;
 }
 .text-container p,
 .sidebar__title {
   text-transform: uppercase;
 }
+.forgotten-password {
+  margin-top: auto;
+}
 .sidebar__title,
 .forgotten-password p {
   color: $white;
+}
+.sidebar__form {
+  margin-top: 260px;
 }

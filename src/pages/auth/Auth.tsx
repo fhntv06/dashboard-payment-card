@@ -14,7 +14,9 @@ export const Auth = () => {
       <main className={cx('main')}>
         <div className={cx('sidebar')}>
           <h3 className={cx('sidebar__title')}>Карты оплаты</h3>
-          <AuthForm />
+          <div className={cx('sidebar__form')}>
+            <AuthForm />
+          </div>
           <Link className={cx('forgotten-password')} to='/forgotten-password'>
             <p className={cx('p-medium')}>Забыли пароль?</p>
           </Link>
