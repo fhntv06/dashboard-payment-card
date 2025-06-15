@@ -26,9 +26,15 @@ body {
 #root {
   display: flex;
 }
+h1, .h1,
+h2, .h2
+h3, .h3,
+h4, .h4,
+p, .p {
+  line-height: 1.2;
+}
 h1, .h1 {
   font-size: $h1-size;
-  line-height: 1;
   font-weight: $font-w-bold;
 
   &.h1-reg {
@@ -40,18 +46,15 @@ h1, .h1 {
 }
 h2, .h2 {
   font-size: $h2-size;
-  line-height: 16px;
   font-weight: $font-w-semibold;
 
   &.h2-big {
     font-size: calc($h2-size * 2);
     font-weight: $font-w-regular;
-    line-height: 1.7;
   }
 }
 p, .p {
   font-size: $p-size;
-  line-height: 1.5;
   font-weight: $font-w-regular;
 
   &.p-reg {
@@ -59,15 +62,12 @@ p, .p {
   }
   &.p-large {
     font-size: $p-large-size;
-    line-height: 28px;
   }
   &.p-big {
     font-size: $p-big-size;
-    line-height: 28px;
   }
   &.p-medium {
     font-size: $p-medium-size;
-    line-height: 16px;
 
     &.p-reg {
       font-weight: $font-w-regular;
@@ -75,12 +75,10 @@ p, .p {
   }
   &.p-small {
     font-size: $p-small-size;
-    line-height: 16px;
     font-weight: $font-w-semibold;
   }
   &.p-x-small {
     font-size: $p-x-small-size;
-    line-height: 12px;
     font-weight: $font-w-semibold;
   }
 }
